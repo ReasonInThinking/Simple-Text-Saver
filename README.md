@@ -14,3 +14,11 @@ A basic PHP tool to save and update a single text note. It doesn't create a long
 1. Create a database named `reload`.
 2. Create a table named `text` with an `id` and a `message` column.
 3. Drop the files into your local server folder (like `htdocs`) and you are ready to go!
+4. 
+### How to run
+This project requires a local server to work. The easiest way is to use **XAMPP**. 
+
+1. Install **XAMPP**.
+2. Start **Apache** and **MySQL** in the XAMPP Control Panel.
+3. Place the project folder inside `C:/xampp/htdocs/` | **Linux**: Place the folder in `/opt/lampp/htdocs/` 
+4. Open your browser and go to `localhost/your_folder_name`.
