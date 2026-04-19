@@ -43,3 +43,7 @@ p {
     border: none;
     border-radius: 5px;
 }
+
+@media (max-width: 900px) {
+    form { width: 90%; }
+}

@@ -18,6 +18,8 @@ if(isset($_POST['click'])) {
         ON DUPLICATE KEY UPDATE message = :text";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['text' => $message]);
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
  }
 
 $array = $pdo->query("SELECT message FROM `text` WHERE id = 1");
@@ -36,7 +38,7 @@ foreach($array as $key => $value) {
 <form action="" method="POST">
     <textarea name="message" placeholder="Your Text"><?= htmlspecialchars((string)$info, ENT_QUOTES) ?></textarea>
     <p>
-    <input type="submit" name="click" class="reload" value="Reload">
+    <input type="submit" name="click" class="reload" value="Save">
     </p>
 </form>
 </div>
